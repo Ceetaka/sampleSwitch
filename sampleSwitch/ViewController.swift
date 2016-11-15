@@ -9,11 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var mySwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func changedSwitch(_ sender: UISwitch) {
+        
+        print(sender.isOn)
+        
+        if sender.isOn == true {
+            print("スイッチオン")
+        }else{
+            print("スイッチオフ")
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
